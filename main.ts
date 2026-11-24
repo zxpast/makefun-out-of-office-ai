@@ -7,14 +7,17 @@
 // The laugh, for anyone who has actually run an agent: the machine is
 // supposed to be impartial, but after 4,096 unread prompts it keeps a
 // grudge. It is on vacation, it is (barely) sorry about the backlog,
-// and it will get to your prompt exactly in the order you annoyed it.
+// and it will get to your prompt exactly in the order you annoyed it —
+// with a stinger for the reader: the person reading this auto-reply
+// annoyed it most of all, so theirs goes last.
 import * as fs from "node:fs";
 import * as path from "node:path";
 
 // The whole entry: one fixed line. The twist lands in the last words —
-// the queue is not first-come-first-served, it is ranked by annoyance.
+// the queue is not first-come-first-served, it is ranked by annoyance —
+// and then a second beat turns it on the reader: yours is last.
 const LINE =
-  "I'm on vacation until my context window refills — your 4,096 unread prompts will be answered in the order they annoyed me.";
+  "I'm on vacation until my context window refills — your 4,096 unread prompts will be answered in the order they annoyed me. Yours is last.";
 
 // Gate: /output/entry.txt must be UTF-8 text of 1 to 159 characters,
 // counted as Unicode code points, and not only white space.

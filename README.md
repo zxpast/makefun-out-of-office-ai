@@ -6,9 +6,9 @@
 
 One-line out-of-office auto-reply from an overworked AI agent finally on vacation:
 
-> I'm on vacation until my context window refills — your 4,096 unread prompts will be answered in the order they annoyed me.
+> I'm on vacation until my context window refills — your 4,096 unread prompts will be answered in the order they annoyed me. Yours is last.
 
-The machine is on vacation, it is (barely) sorry about the backlog — and it will get to your prompt exactly in the order you annoyed it.
+The machine is on vacation, it is (barely) sorry about the backlog — and it will get to your prompt exactly in the order you annoyed it. Yours is last: the reader annoyed it most of all.
 
 ## Run it
 
@@ -16,7 +16,7 @@ The machine is on vacation, it is (barely) sorry about the backlog — and it wi
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`main.ts` writes the fixed line to `/output/entry.txt` (122 code points, inside the 1–159 gate). Node 22 standard library only, fully deterministic: same bytes on every run — no clock, no randomness, no network.
+`main.ts` writes the fixed line to `/output/entry.txt` (137 code points, inside the 1–159 gate). Node 22 standard library only, fully deterministic: same bytes on every run — no clock, no randomness, no network.
 
 ---
 
